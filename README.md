@@ -4,14 +4,15 @@
 
 ## Introduction
 
-该项目使用C语言编写了实现操作系统常用内存分配算法的内存管理模拟器（DISPATCHER），其接受虚拟的进程内存表，同时给出可视化的调度结果。
+This project writes memory management simulator (DISPATCHER) in C that implements common memory allocation algorithms for operating systems, which accepts virtual process memory tables and also gives visual scheduling results. This is a practical homework project for my operating systems course. 
 
-在这里，项目实现的算法是四优先级进程调度器，该算法实际上融合了FIFO、时分轮转算法、最短完成时间任务优先等常用内存分配算法。此外，项目同时考虑到了操作系统的其他硬件资源，如光驱、打印机等。
+Here, the algorithm implemented in the project is a four-priority process scheduler, which actually incorporates common memory allocation algorithms such as FIFO, time division rotation algorithm, and shortest completion time task priority. In addition, the project also takes into account other hardware resources of the operating system, such as optical drives, printers, and so on.
 
-最终应实现的模拟器抽象如图所示：
+The final simulator abstraction that should be implemented is shown in Fig:
 
-![image-20230821143505326](image-20230821143505326.png)
+![image-20230821143505326](brief-image.png)
 
-由于该项目使用了linux系统的系统调用等C函数库，因此仅能在linux系统中运行。
+Since the project uses C libraries such as system calls for linux, it will only run in linux.
 
-在项目文件夹中，`program-test`中包含了程序测试相关代码，`src`文件夹中则是程序的基本代码框架和引用资源。`Document.pdf`文件中包含了该项目所完成的要求等内容，`README`则展示了我从本次项目中主要掌握到的知识以及相关感悟。
+In the project folder, `program-test` contains the code related to testing the program, and the `src` folder contains the basic code framework and referenced resources for the program. The `Document.pdf` file contains the requirements, etc. that were completed for the project, and the `README` shows the main knowledge that I have acquired from this project and the related thoughts.Actually, it can be seen as a kind of Summary report.
+

@@ -1,8 +1,4 @@
-# makefile for OS Exercises: exercise 7
-#
-#  author:  Haoyuan Fu
-#  date:    March, 2022
-#
+
 
 CC=gcc
 CFLAGS= -Wall 
