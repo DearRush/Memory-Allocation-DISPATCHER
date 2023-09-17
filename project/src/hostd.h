@@ -9,8 +9,6 @@
  *******************************************************************
 
   version: 1.2 (exercise 11 and final project)
-  date:    December 2003
-  author:  Dr Ian G Graham, ian.graham@griffith.edu.au
   history:
      v1.0: original for exercises 7, 8 & 9
      v1.1: add memory allocation (exercise 10)
