@@ -25,8 +25,6 @@
       
  ********************************************************************
    version: 1.0
-   date:    December 2003
-   author:  Dr Ian G Graham, ian.graham@griffith.edu.au
    history: derived from original simple sleep process (Exercise 1)
 
  *******************************************************************/
