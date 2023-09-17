@@ -16,8 +16,6 @@
 ********************************************************************
 
   version: 1.0 (exercise 11 and full project dispatcher)
-  date:    December 2003
-  author:  Dr Ian G Graham, ian.graham@griffith.edu.au
   history:
      v1.0: Original for exercises 11 and full project dispatcher
 
