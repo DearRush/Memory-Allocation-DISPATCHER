@@ -20,8 +20,6 @@
  ********************************************************************
 
   version: 1.2 (exercise 11 and final project)
-  date:    December 2003
-  author:  Dr Ian G Graham, ian.graham@griffith.edu.au
   history:
      v1.0: Original for exercises 7, 8, & 9
      v1.1: Add reference to memory block structure for exercise 10
