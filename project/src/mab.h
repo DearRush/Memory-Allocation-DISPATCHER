@@ -21,8 +21,6 @@
 ********************************************************************
 
   version: 1.0 (exercise 10)
-  date:    December 2003
-  author:  Dr Ian G Graham, ian.graham@griffith.edu.au
   history:
      v1.0: Original for exercise 10
 
