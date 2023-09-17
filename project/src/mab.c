@@ -44,8 +44,6 @@
 ********************************************************************
 
   version: 1.0 (exercise 10)
-  date:    December 2003
-  author:  Dr Ian G Graham, ian.graham@griffith.edu.au
   history:
      v1.0: Original for exercise 10
 
@@ -108,10 +106,10 @@ MabPtr memAlloc(MabPtr arena, int size)
         // TODO
 
         next_mab = arena;
-        if ((m = memChk(next_mab, size)) && (m = memSplit(m, size)))     //´Ónext_mabÖ¸ÏòµÄÄÚ´æ¿ªÊ¼²éÕÒ£¬ÆäÓàºÍFIRST_FITÏàËÆ
+        if ((m = memChk(next_mab, size)) && (m = memSplit(m, size)))     //ä»next_mabæŒ‡å‘çš„å†…å­˜å¼€å§‹æŸ¥æ‰¾ï¼Œå…¶ä½™å’ŒFIRST_FITç›¸ä¼¼
         {
             m->allocated = TRUE;
-            next_mab = m->next;                        //ÓÃÒ»¸öÖ¸ÕëÖ¸Ïò±»·ÖÅäÄÚ´æ¿éµÄÏÂÒ»¸öÄÚ´æ¿é
+            next_mab = m->next;                        //ç”¨ä¸€ä¸ªæŒ‡é’ˆæŒ‡å‘è¢«åˆ†é…å†…å­˜å—çš„ä¸‹ä¸€ä¸ªå†…å­˜å—
             return m;
         }
         else
@@ -127,13 +125,13 @@ MabPtr memAlloc(MabPtr arena, int size)
         // TODO
 
         MabPtr a;
-        a = arena;                         //ÓÃÁÙÊ±±äÁ¿a¼ÇÂ¼×î³õµÄµØÖ·
+        a = arena;                         //ç”¨ä¸´æ—¶å˜é‡aè®°å½•æœ€åˆçš„åœ°å€
         int min = 1025;
-        while (m = memChk(arena, size))     //±éÀúÁ´±í£¬ÕÒµ½ÄÜ¹»Âú×ãÄÚ´æĞèÇóµÄ¸÷¸öÄÚ´æ¿éÖĞ×îĞ¡µÄÄÚ´æÖµ
+        while (m = memChk(arena, size))     //éå†é“¾è¡¨ï¼Œæ‰¾åˆ°èƒ½å¤Ÿæ»¡è¶³å†…å­˜éœ€æ±‚çš„å„ä¸ªå†…å­˜å—ä¸­æœ€å°çš„å†…å­˜å€¼
         {
             if (min >= m->size)
             {
-                min = m->size;              //µü´ú¼ÇÂ¼×îĞ¡Öµ
+                min = m->size;              //è¿­ä»£è®°å½•æœ€å°å€¼
                 arena = arena->next;
             }
             else
@@ -143,7 +141,7 @@ MabPtr memAlloc(MabPtr arena, int size)
         }
         while (a)
         {
-            if (a->size == min)          //ÕÒµ½ÄÚ´æÖµÎª×îĞ¡ÖµµÄµÚÒ»¸öÄÚ´æ¿é£¬·ÖÅäÄÚ´æ
+            if (a->size == min)          //æ‰¾åˆ°å†…å­˜å€¼ä¸ºæœ€å°å€¼çš„ç¬¬ä¸€ä¸ªå†…å­˜å—ï¼Œåˆ†é…å†…å­˜
             {
                 a = memSplit(a, size);
                 a->allocated = TRUE;
@@ -154,7 +152,7 @@ MabPtr memAlloc(MabPtr arena, int size)
                 a = a->next;
             }
         }
-        if (min >= 1025)                  //ËµÃ÷Ã»ÓĞÕÒµ½ºÏÊÊµÄÄÚ´æ¿é
+        if (min >= 1025)                  //è¯´æ˜æ²¡æœ‰æ‰¾åˆ°åˆé€‚çš„å†…å­˜å—
         {
             return NULL;
         }
@@ -171,11 +169,11 @@ MabPtr memAlloc(MabPtr arena, int size)
         MabPtr a;
         a = arena;
         int max = 0;
-        while (m = memChk(arena, size))     //±éÀúÁ´±í£¬ÕÒµ½ÄÜ¹»Âú×ãÄÚ´æĞèÇóµÄ¸÷¸öÄÚ´æ¿éÖĞ×î´óµÄÄÚ´æÖµ
+        while (m = memChk(arena, size))     //éå†é“¾è¡¨ï¼Œæ‰¾åˆ°èƒ½å¤Ÿæ»¡è¶³å†…å­˜éœ€æ±‚çš„å„ä¸ªå†…å­˜å—ä¸­æœ€å¤§çš„å†…å­˜å€¼
         {
             if (max <= m->size)
             {
-                max = m->size;              //µü´ú¼ÇÂ¼×î´óÖµ
+                max = m->size;              //è¿­ä»£è®°å½•æœ€å¤§å€¼
                 arena = arena->next;
             }
             else
@@ -185,7 +183,7 @@ MabPtr memAlloc(MabPtr arena, int size)
         }
         while (a)
         {
-            if (a->size == max)          //ÕÒµ½ÄÚ´æÖµÎª×î´óÖµµÄµÚÒ»¸öÄÚ´æ¿é£¬·ÖÅäÄÚ´æ
+            if (a->size == max)          //æ‰¾åˆ°å†…å­˜å€¼ä¸ºæœ€å¤§å€¼çš„ç¬¬ä¸€ä¸ªå†…å­˜å—ï¼Œåˆ†é…å†…å­˜
             {
                 a = memSplit(a, size);
                 a->allocated = TRUE;
@@ -196,7 +194,7 @@ MabPtr memAlloc(MabPtr arena, int size)
                 a = a->next;
             }
         }
-        if (max <= 0)                  //ËµÃ÷Ã»ÓĞÕÒµ½ºÏÊÊµÄÄÚ´æ¿é
+        if (max <= 0)                  //è¯´æ˜æ²¡æœ‰æ‰¾åˆ°åˆé€‚çš„å†…å­˜å—
         {
             return NULL;
         }
