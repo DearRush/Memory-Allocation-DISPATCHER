@@ -73,8 +73,6 @@ OS Eercises - Project 2 - HOST dispatcher - Exercise 11 and project final
 ********************************************************************
 
 version: 1.4 (exercise 11 and project final)
-date:    December 2003
-author:  Dr Ian G Graham, ian.graham@griffith.edu.au
 history:
    v1.0: Original simple FCFS dispatcher (exercise 7)
    v1.1: Simple round-robin dispatcher (exercise 8)
